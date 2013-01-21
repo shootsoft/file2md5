@@ -8,4 +8,4 @@ Useage
 
     file2md5 <target_file> [output_file_name]
     
-default output_file_name = <<target_file>>.md5
+default output_file_name = {target_file}.md5
