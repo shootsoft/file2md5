@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
+using System.Windows.Forms;
 
 namespace file2md5
 {
     class Program
     {
+        [STAThread]
         static void Main(string[] args)
         {
             string output = string.Empty;
@@ -43,6 +45,8 @@ namespace file2md5
                         }
                         Console.WriteLine("Expected: " + expected);
                         Console.WriteLine("Actual: " + md5);
+                        Console.WriteLine("The acutal md5 value had been set to clipboard!");
+                        Clipboard.SetDataObject(md5, true);
                         Console.Read();
                     }
                     else
